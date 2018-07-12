@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def require_login!
     return true if authenticate_token
-    render json: { errors: [ { detail: "Access denied" } ] }, status: 401
+    render json: { errors: [ { detail: "Access denied." } ] }, status: 401
   end
 
   def current_user
