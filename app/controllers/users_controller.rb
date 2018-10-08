@@ -3,11 +3,6 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :require_login!, only: [:create]
 
-  def index
-    users = User.all
-    render json: { users: users }, status: :ok
-  end
-
   def show
     render json: { user: @user }, status: :ok
   end

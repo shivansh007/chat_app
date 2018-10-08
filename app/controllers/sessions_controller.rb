@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
   private
 
   def invalid_login_attempt
-    render json: { errors: [ { detail:"Error with your login or password." }]}, status: 401
+    render json: { errors: [ { detail: "Invalid email or password." }]}, status: 401
   end
 end
